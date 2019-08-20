@@ -3,10 +3,10 @@ function newChaosMarine() {
     hitPoints: 100,
     hpDefault: 100,
     weapons: [
-      { bolter: 5, reload: 2 },
-      { heavyBolter: 8, reload: 3 },
-      { squadAttack: 12, reload: 5 },
-      { plasmaSword: 19, reload: 1 }
+      { bolter: 3, ammo: 10, reload: 2 },
+      { heavyBolter: 5, ammo: 5, reload: 3 },
+      { squadAttack: 10, ammo: 3, reload: 5 },
+      { plasmaSword: 8, ammo: 4, reload: 1 }
     ],
     beefed: function(num) {
       this.hitPoints = this.hitPoints * num;
@@ -38,6 +38,7 @@ function newChaosMarine() {
           console.log(i);
         }, 2000);
       }
+      chaosMarine.weapons[0].ammo -= 1;
       spaceMarine.hitPoints -= chaosMarine.weapons[0].bolter;
       marineHealth.style.width = `${spaceMarine.hitPoints}%`;
       marineHealth.innerText = spaceMarine.hitPoints;
@@ -56,6 +57,8 @@ function newChaosMarine() {
           console.log(i);
         }, 2000);
       }
+      chaosMarine.weapons[1].ammo -= 1;
+
       spaceMarine.hitPoints -= chaosMarine.weapons[1].heavyBolter;
       marineHealth.style.width = `${spaceMarine.hitPoints}%`;
       marineHealth.innerText = spaceMarine.hitPoints;
@@ -73,7 +76,11 @@ function newChaosMarine() {
           }
           console.log(i);
         }, 2000);
+        chaosMarine.weapons[0].ammo -= 1;
+        chaosMarine.weapons[0].ammo -= 1;
+        chaosMarine.weapons[0].ammo -= 1;
       }
+      chaosMarine.weapons[0].ammo -= 1;
       spaceMarine.hitPoints -= chaosMarine.weapons[2].squadAttack;
       marineHealth.style.width = `${spaceMarine.hitPoints}%`;
       marineHealth.innerText = spaceMarine.hitPoints;
@@ -92,6 +99,7 @@ function newChaosMarine() {
           console.log(i);
         }, 2000);
       }
+      chaosMarine.weapons[3].ammo -= 1;
       spaceMarine.hitPoints -= chaosMarine.weapons[3].plasmaSword;
       marineHealth.style.width = `${spaceMarine.hitPoints}%`;
       marineHealth.innerText = spaceMarine.hitPoints;
@@ -101,3 +109,4 @@ function newChaosMarine() {
 
   return obj;
 }
+
