@@ -1,0 +1,161 @@
+#game {
+  border: 1px solid black;
+  display: grid;
+  width: 100hw;
+  height: 100vh;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(8,  1fr );
+  row-gap:3px;
+  column-gap:5px ;
+
+  grid-template-areas:
+    "marine marine marine . chaos chaos chaos "
+    "marine marine marine . chaos chaos chaos "
+    "marine marine marine . chaos chaos chaos "
+    "marine marine marine rst chaos chaos chaos "
+    "marine marine marine rst chaos chaos chaos "
+    "stats  stats  stats  . stats1 stats1 stats1"
+    "wep1   wep3   reld1  . reld  wep5  wep6  "
+    "wep2   wep4   mega1  . mega  wep7  wep8  ";
+}
+#resetBattle{
+    grid-area: rst;
+  border: 1px solid black;
+
+}
+
+/* ////////////// CHAOS MARINE WAR HANGAR ///////////////// */
+#chaosMarine {
+  border: 1px solid black;
+
+  grid-area: chaos;
+  width: 100%;
+}
+.weapon1-1 {
+  border: 1px solid black;
+
+  grid-area: wep5;
+  width: 100%;
+}
+.weapon1-2 {
+  border: 1px solid black;
+
+  grid-area: wep6;
+  width: 100%;
+}
+.weapon1-3 {
+  border: 1px solid black;
+
+  grid-area: wep7;
+  width: 100%;
+}
+.weapon1-4 {
+  border: 1px solid black;
+
+  grid-area: wep8;
+  width: 100%;
+}
+#stats1{
+    grid-area: stats1;
+}
+#hp1 {
+  border: 1px solid black;
+  height: 49%;
+  grid-area: hp;
+    grid-row-gap: 0;
+
+}
+#super1 {
+  border: 1px solid black;
+  height: 49%;
+
+  grid-area: sup;
+}
+#attack1 {
+  border: 1px solid black;
+
+  grid-area: attk;
+}
+#reload1 {
+  border: 1px solid black;
+
+  grid-area: reld;
+}
+#mega1 {
+  border: 1px solid black;
+
+  grid-area: mega;
+}
+/* ////////////// SPACE MARINE WAR HANGAR ///////////////// */
+#spaceMarine {
+  border: 1px solid black;
+
+  grid-area: marine;
+  width: 100%;
+}
+
+.weapon1 {
+  border: 1px solid black;
+
+  grid-area: wep1;
+  width: 100%;
+}
+.weapon2 {
+  border: 1px solid black;
+
+  grid-area: wep2;
+  width: 100%;
+}
+.weapon3 {
+  border: 1px solid black;
+
+  grid-area: wep3;
+  width: 100%;
+}
+.weapon4 {
+  border: 1px solid black;
+
+  grid-area: wep4;
+  width: 100%;
+}
+#stats{
+grid-area: stats;
+}
+#hp {
+  border: 1px solid black;
+  height: 49%;
+
+
+  grid-area: hp1;
+}
+#super {
+  border: 1px solid black;
+  height: 49%;
+
+
+  grid-area: sup1;
+}
+#attack {
+  border: 1px solid black;
+
+  grid-area: attk1;
+}
+#reload {
+  border: 1px solid black;
+
+  grid-area: reld1;
+}
+#mega {
+  border: 1px solid black;
+
+  grid-area: mega1;
+}
+
+#chaos {
+  width: 100%;
+  height: 100%;
+}
+#marine {
+  width: 100%;
+  height: 100%;
+}

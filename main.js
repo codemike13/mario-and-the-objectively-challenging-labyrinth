@@ -5,7 +5,7 @@ fightButton.onclick = attackRound;
 const monsters = [];
 
 while (monsters.length < 5) {
-  monsters.push(newMonster(monsters.length));
+  monsters.push(newChaosMarine(monsters.length));
 }
 
 // This will keep track of what monster we're currently on, though we could alternately shift out of our array if you find the global index variable too awkward.
